@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodej – BeeŽuterie</title>
+    <link rel="stylesheet" href="style.css">
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBEbOK-cRXmGu6yB-f76oEcze35LokX_U8",
+    authDomain: "beezuterie.firebaseapp.com",
+    projectId: "beezuterie",
+    storageBucket: "beezuterie.firebasestorage.app",
+    messagingSenderId: "126973951608",
+    appId: "1:126973951608:web:1563c12a36d3f07a6bb78d",
+    measurementId: "G-T935WGQNJ6"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.collection = collection;
+  window.addDoc = addDoc;
+</script>
+
+</head>
+<body>
+
+<header>
+    <h1 class="logo">
+        <img src="obrazky/bee.png" alt="logo">
+        BeeŽuterie
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="produkty.html">Produkty</a></li>
+            <li><a href="kosik.html">Košík</a></li>
+            <li><a href="prodej.html">Prodej</a></li>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>Prodej vlastního šperku</h2>
+
+    <form onsubmit="submitProduct(event)">
+        <input type="text" placeholder="Název produktu" id="name" required>
+        <input type="number" placeholder="Cena (Kč)" id="price" required>
+        
+        <select id="category">
+            <option>Prsten</option>
+            <option>Náramek</option>
+            <option>Náhrdelník</option>
+            <option>Piercing</option>
+        </select>
+
+        <textarea placeholder="Popis produktu" id="desc"></textarea>
+
+        <button type="submit">Přidat produkt</button>
+    </form>
+
+    <h3>Nově přidané produkty:</h3>
+    <div id="user-products"></div>
+</section>
+
+<footer>
+    <p>© 2026 BeeŽuterie</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

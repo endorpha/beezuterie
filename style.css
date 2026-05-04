@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, rgb(255, 203, 47), rgb(255, 172, 47));
+    color: black;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, rgb(255, 203, 47), rgb(255, 172, 47));
+    color: black;
+    text-decoration: none;
+}
+
+.products {
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 25%;
+    max-height: 200px;
+    object-fit: inherit;
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    background: linear-gradient(90deg, rgb(255, 203, 47), rgb(255, 172, 47));
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(255, 203, 47), rgb(255, 172, 47));
+    color: black;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    filter: hue-rotate(30deg) saturate(2);
+}
+
+.logo img {
+     width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.content {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+body {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card {
+    overflow: hidden;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #f4b400;
+    color: black;
+    transform: scale(1.05);
+}
+
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: rotate(-10deg) scale(1.1);
+}

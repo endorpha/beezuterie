@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Košík</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadCart()">
+
+<header>
+    <section class="content">
+    <h2>Košík</h2>
+<button onclick="clearCart()">Vymazat košík</button>
+    <div id="cart-items"></div>
+
+    <h3>Celkem: <span id="total">0 Kč</span></h3>
+</section>
+
+<script src="script.js"></script>
+    <nav>
+    <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="produkty.html">Produkty</a></li>
+        <li><a href="kosik.html">Košík</a></li>
+        <li><a href="o-nas.html">O nás</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="prodej.html">Prodej</a></li>
+    </ul>
+</nav>
+</header>
+
+<section>
+    <div id="cart-items"></div>
+    <h2>Celkem: <span id="total"></span></h2>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
